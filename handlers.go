@@ -1351,11 +1351,17 @@ func (s *server) SendVideo() http.HandlerFunc {
 // Sends Contact
 func (s *server) SendContact() http.HandlerFunc {
 
+	type contactVcardStruct struct {
+		Name  string
+		Vcard string
+	}
+
 	type contactStruct struct {
 		Phone       string
 		Id          string
 		Name        string
 		Vcard       string
+		VcardArray  []contactVcardStruct
 		ContextInfo waE2E.ContextInfo
 	}
 
@@ -1382,11 +1388,11 @@ func (s *server) SendContact() http.HandlerFunc {
 			s.Respond(w, r, http.StatusBadRequest, errors.New("missing Phone in Payload"))
 			return
 		}
-		if t.Name == "" {
+		if t.Name == "" && len(t.VcardArray) == 0 {
 			s.Respond(w, r, http.StatusBadRequest, errors.New("missing Name in Payload"))
 			return
 		}
-		if t.Vcard == "" {
+		if t.Vcard == "" && len(t.VcardArray) == 0 {
 			s.Respond(w, r, http.StatusBadRequest, errors.New("missing Vcard in Payload"))
 			return
 		}
@@ -1408,6 +1414,21 @@ func (s *server) SendContact() http.HandlerFunc {
 			DisplayName: &t.Name,
 			Vcard:       &t.Vcard,
 		}}
+
+		var contacts []*waE2E.ContactMessage
+
+		for _, item := range t.VcardArray {
+			contacts = append(contacts, &waE2E.ContactMessage{
+				DisplayName: &item.Name,
+				Vcard:       &item.Vcard,
+			})
+		}
+
+		if len(contacts) > 1 {
+			msg = &waE2E.Message{ContactsArrayMessage: &waE2E.ContactsArrayMessage{
+				Contacts: contacts,
+			}}
+		}
 
 		if t.ContextInfo.StanzaID != nil {
 			msg.ExtendedTextMessage.ContextInfo = &waE2E.ContextInfo{
@@ -1802,6 +1823,7 @@ func (s *server) SendMessage() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
 		txtid := r.Context().Value("userinfo").(Values).Get("Id")
+		jid := r.Context().Value("userinfo").(Values).Get("Jid")
 
 		if clientManager.GetWhatsmeowClient(txtid) == nil {
 			s.Respond(w, r, http.StatusInternalServerError, errors.New("no session"))
@@ -1828,6 +1850,26 @@ func (s *server) SendMessage() http.HandlerFunc {
 			s.Respond(w, r, http.StatusBadRequest, errors.New("missing Body in Payload"))
 			return
 		}
+
+		if t.ContextInfo.StanzaID != nil && t.ContextInfo.Participant == nil {
+			t.ContextInfo.Participant = &jid
+		}
+
+		// Parse phone to JID for LID lookup
+		// phoneJID, ok := parseJID(t.Phone)
+		// if !ok {
+		// 	log.Error().Msg("could not parse Phone for LID lookup")
+		// 	s.Respond(w, r, http.StatusBadRequest, errors.New("could not parse Phone"))
+		// 	return
+		// }
+
+		// phoneNumber, err := clientManager.GetMyClient(txtid).WAClient.Store.LIDs.GetPNForLID(context.Background(), phoneJID)
+		// if err != nil {
+		// 	log.Error().Msg(fmt.Sprintf("%s", err))
+		// 	s.Respond(w, r, http.StatusBadRequest, err)
+		// 	return
+		// }
+		// log.Debug().Str("userID", txtid).Str("target", t.Phone).Str("resolvedPhoneNumber", phoneNumber.String()).Msg("Phone number resolved from LID")
 
 		recipient, err := validateMessageFields(t.Phone, t.ContextInfo.StanzaID, t.ContextInfo.Participant)
 		if err != nil {
