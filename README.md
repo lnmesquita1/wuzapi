@@ -57,6 +57,7 @@ you can use to alter behaviour
 * -osname : Connection OS Name in Whatsapp
 * -skipmedia : Skip downloading media from messages
 * -wadebug : enable whatsmeow debug, either INFO or DEBUG levels are suported
+
 * -sslcertificate : SSL Certificate File
 * -sslprivatekey : SSL Private Key File
 
@@ -240,17 +241,17 @@ Check the [API Reference](https://github.com/asternic/wuzapi/blob/main/API.md)
 <table>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/guilhermejansen>
-            <img src=https://avatars.githubusercontent.com/u/52773109?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Guilherme Jansen/>
-            <br />
-            <sub style="font-size:14px"><b>Guilherme Jansen</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/asternic>
             <img src=https://avatars.githubusercontent.com/u/25182694?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Nicolas/>
             <br />
             <sub style="font-size:14px"><b>Nicolas</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/guilhermejansen>
+            <img src=https://avatars.githubusercontent.com/u/52773109?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Guilherme Jansen/>
+            <br />
+            <sub style="font-size:14px"><b>Guilherme Jansen</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -284,10 +285,24 @@ Check the [API Reference](https://github.com/asternic/wuzapi/blob/main/API.md)
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/chrsmendes>
+            <img src=https://avatars.githubusercontent.com/u/77082167?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Christopher Mendes/>
+            <br />
+            <sub style="font-size:14px"><b>Christopher Mendes</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/andreydruz>
             <img src=https://avatars.githubusercontent.com/u/976438?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=andreydruz/>
             <br />
             <sub style="font-size:14px"><b>andreydruz</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/luiis716>
+            <img src=https://avatars.githubusercontent.com/u/97978347?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=luiis716/>
+            <br />
+            <sub style="font-size:14px"><b>luiis716</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
@@ -304,6 +319,15 @@ Check the [API Reference](https://github.com/asternic/wuzapi/blob/main/API.md)
             <sub style="font-size:14px"><b>Gustavo Salomé </b></sub>
         </a>
     </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/anilgulecha>
+            <img src=https://avatars.githubusercontent.com/u/1016984?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Anil Gulecha/>
+            <br />
+            <sub style="font-size:14px"><b>Anil Gulecha</b></sub>
+        </a>
+    </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/DwiRizqiH>
             <img src=https://avatars.githubusercontent.com/u/69355492?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Ahmad Dwi Rizqi Hidayatulloh/>
@@ -325,8 +349,20 @@ Check the [API Reference](https://github.com/asternic/wuzapi/blob/main/API.md)
             <sub style="font-size:14px"><b>Fadlul Alim</b></sub>
         </a>
     </td>
-</tr>
-<tr>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/JobasFernandes>
+            <img src=https://avatars.githubusercontent.com/u/26033148?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Joseph Fernandes/>
+            <br />
+            <sub style="font-size:14px"><b>Joseph Fernandes</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/renancesarti-cyber>
+            <img src=https://avatars.githubusercontent.com/u/235291917?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=renancesarti-cyber/>
+            <br />
+            <sub style="font-size:14px"><b>renancesarti-cyber</b></sub>
+        </a>
+    </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/ruben18salazar3>
             <img src=https://avatars.githubusercontent.com/u/86245508?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Rubén Salazar/>
@@ -334,6 +370,8 @@ Check the [API Reference](https://github.com/asternic/wuzapi/blob/main/API.md)
             <sub style="font-size:14px"><b>Rubén Salazar</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/ryanachdiadsyah>
             <img src=https://avatars.githubusercontent.com/u/165612793?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Ryan Achdiadsyah/>
